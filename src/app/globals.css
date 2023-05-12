@@ -292,3 +292,92 @@ pre {
   border-bottom: solid;
   padding: 2rem;
 }
+
+.projectInfo {
+  padding: 1rem;
+}
+
+.projectTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  flex-direction: column;
+  opacity: 0;
+  animation: fade-in-animation 3s forwards;
+  color: #e14d0d;
+  padding: 0.5rem;
+  border-bottom: solid;
+  margin-bottom: 1rem;
+  top: 0;
+}
+
+.projectDes {
+  font-size: 1.25rem;
+  color: #e2e4a6;
+  margin-bottom: 1rem;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0; /* Adjust the line thickness as needed */
+  background-color: #98d5a3; /* Adjust the line color as needed */
+  opacity: 0; /* Hide the line by default */
+  transition: opacity 0.1s ease-in-out;
+}
+
+.button:hover {
+  opacity: 1; /* Show the line on hover */
+  animation: blink 1s infinite; /* Apply blinking animation */
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 0;
+  height: 100%;
+  width: 0; /* Adjust the line thickness as needed */
+  background-color: #98d5a3; /* Adjust the line color as needed */
+  opacity: 0; /* Hide the line by default */
+  transition: opacity 0.1s ease-in-out;
+}
+
+.button {
+  border-radius: 0.5rem;
+  padding: 6px;
+  font-size: 1.5rem;
+}
+
+.demo {
+  color: #0b1a19;
+  background-color: #97d1a1;
+}
+
+.code {
+  color: #0b1a19;
+  background-color: #d4fcf3;
+}
+
+.webImage {
+  border-radius: 0.5rem;
+  border: solid;
+  border-color: #e5e7a7;
+}
+
+@media (max-width: 768px) {
+  .projectContainer {
+    flex-direction: column;
+    border-top: none;
+    border-bottom: solid;
+    padding: 2rem;
+    border-width: 4px;
+    border-color: #032c2f;
+    font-size: 15px;
+    margin: 2vh 3rem;
+  }
+}
