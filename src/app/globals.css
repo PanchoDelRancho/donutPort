@@ -1,9 +1,9 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -81,27 +81,214 @@
 
 html,
 body {
-  max-width: 100vw;
+  max-width: 1200px;
   overflow-x: hidden;
+  margin: 0 auto;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #0b1a19;
+  font-family: "Exo 2", sans-serif;
 }
-
 a {
   color: inherit;
   text-decoration: none;
+  margin: 1vh 3vw;
+  padding-bottom: 5px;
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px; /* Add some space below thea */
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* Adjust the line thickness as needed */
+  background-color: #98d5a3; /* Adjust the line color as needed */
+  opacity: 0; /* Hide the line by default */
+  transition: opacity 0.1s ease-in-out;
+}
+
+a:hover::after {
+  opacity: 1; /* Show the line on hover */
+  animation: blink 1s infinite; /* Apply blinking animation */
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 0;
+  height: 100%;
+  width: 2px; /* Adjust the line thickness as needed */
+  background-color: #98d5a3; /* Adjust the line color as needed */
+  opacity: 0; /* Hide the line by default */
+  transition: opacity 0.1s ease-in-out;
+}
+
+a:hover::before {
+  opacity: 1; /* Show the line on hover */
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+
+pre {
+  color: #2c8c93;
+  z-index: 0;
+  font-size: 2vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.Nav {
+  color: #d6fff6;
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.titleSec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  height: 95vh;
+  flex-direction: column;
+  opacity: 0;
+  animation: fade-in-animation 3s forwards;
+  color: #e2e4a6;
+}
+.title {
+  margin-top: 2vh;
+}
+
+@keyframes fade-in-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+#donutContainer {
+  animation: fade-in-animation 5s forwards;
+  opacity: 0;
+}
+.info {
+  animation: fade-in-animation 10s forwards;
+}
+
+.infoBorder {
+  position: relative;
+}
+
+.infoBorder::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  bottom: -10px;
+  width: 100%;
+  height: 5px; /* Adjust the line thickness as needed */
+  background-color: #98d5a3; /* Adjust the line color as needed */
+  opacity: 0; /* Hide the line by default */
+  transition: opacity 0.1s ease-in-out;
+}
+
+.infoBorder:hover::after {
+  opacity: 1; /* Show the line on hover */
+  animation: blink 1s infinite; /* Apply blinking animation */
+}
+
+.infoBorder::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  height: 100%;
+  width: 5px; /* Adjust the line thickness as needed */
+  background-color: #98d5a3; /* Adjust the line color as needed */
+  opacity: 0; /* Hide the line by default */
+  transition: opacity 0.1s ease-in-out;
+}
+
+.infoBorder:hover::before {
+  opacity: 1; /* Show the line on hover */
+  animation: blink 1s infinite;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 5vh 3rem;
+  font-size: 1.5rem;
+  z-index: 1;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .infoContainer {
+    flex-direction: column;
+    border-top: solid;
+    border-bottom: solid;
+    padding: 2rem;
+    border-width: 4px;
+    border-color: #032c2f;
+    font-size: 15px;
+  }
+}
+
+.skillSec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+  animation: fade-in-animation 10s forwards;
+  background-color: #0b1a19;
+}
+.skillIcon {
+  height: 70px;
+  width: 70px;
+  color: #e5e7a7;
+  margin: 2rem;
+}
+.skillTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  flex-direction: column;
+  opacity: 0;
+  animation: fade-in-animation 3s forwards;
+  color: #e2e4a6;
+  border-bottom: solid;
+  padding: 2rem;
 }
