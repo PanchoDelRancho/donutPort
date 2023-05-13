@@ -1,7 +1,8 @@
 import Donut from "../components/donut";
 import Nav from "../components/nav";
 import About from "../components/about";
-import Projects from "@/components/projects";
+import Projects from "../components/projects";
+import Contact from "../components/contact";
 export default function Home() {
   return (
     <main>
@@ -10,7 +11,8 @@ export default function Home() {
         <Nav />
         <About />
         <Projects />
-        hello world
+        <Contact />
+        <div style={{ height: "4vh" }}></div>
       </div>
     </main>
   );

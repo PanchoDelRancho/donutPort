@@ -2,7 +2,7 @@ export const ProjectsArray = [
   {
     title: "Ameritex",
     description:
-      "A project created to strengthen my front end development, I recreated the website of the last company I worked for. ",
+      "I undertook a project aimed at enhancing my front-end development skills, wherein I meticulously reconstructed the website of my previous employer.",
     img: "/assets/images/ameritex.png",
     demoLink: "https://ameritex-panchodelrancho.vercel.app/",
     codeLink: "https://github.com/PanchoDelRancho/Ameritex",
@@ -10,7 +10,7 @@ export const ProjectsArray = [
   {
     title: "AirConroe",
     description:
-      "A demo for a local soon to be air conditioning company. My first Next Js website, connected to Google Calendar API to create schedule appointments.",
+      "I developed a Next.js website as a demonstration for an upcoming local air conditioning company. This project marked my first foray into Next.js, and I integrated the Google Calendar API to enable appointment scheduling functionality.",
     img: "/assets/images/airconroe.png",
     demoLink: "https://airconroe.vercel.app/",
     codeLink: "https://github.com/PanchoDelRancho/AirConroe",
@@ -18,7 +18,7 @@ export const ProjectsArray = [
   {
     title: "Portfolio Pong",
     description:
-      "My first try at a portfolio project. I incorporated the game Pong with the my portfolio to provide a fun experience while reading my info.",
+      "In my inaugural attempt at a portfolio project, I seamlessly integrated the classic game Pong into my portfolio website to offer an enjoyable experience while exploring my information.",
     img: "/assets/images/pong2d.png",
     demoLink: "https://panchodelrancho.github.io/Pong2D/",
     codeLink: "https://github.com/PanchoDelRancho/Pong2D",

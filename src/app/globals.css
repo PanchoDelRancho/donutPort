@@ -205,6 +205,7 @@ pre {
 
 .infoBorder {
   position: relative;
+  font-size: 1.25rem;
 }
 
 .infoBorder::after {
@@ -380,4 +381,23 @@ pre {
     font-size: 15px;
     margin: 2vh 3rem;
   }
+}
+
+.contactIcon {
+  color: #e84d09;
+  font-size: 2.5rem;
+}
+.goodbye {
+  color: #d3faf3;
+  font-size: 1.25rem;
+  padding: 1.5rem 4rem;
+}
+
+.messBox {
+  color: white;
+  background-color: #ee520e;
+  border-radius: 0.5rem;
+  padding: 4px 4px 0 4px;
+  position: absolute;
+  right: 0;
 }
